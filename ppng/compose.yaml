@@ -12,7 +12,7 @@ volumes:
 
 services:
   gitea:
-    image: docker.io/gitea/gitea:latest
+    image: docker.io/gitea:latest
     container_name: gitea
     environment:
       - USER=git
@@ -34,7 +34,7 @@ services:
       - db
 
   db:
-    image: docker.io/postgres/postgres:latest
+    image: docker.io/postgres:latest
     container_name: postgres
     restart: always
     environment:
@@ -47,7 +47,7 @@ services:
       - postgres:/var/lib/postgresql/data
 
   nginx:
-    image: docker.io/nginx/nginx:mainline
+    image: docker.io/nginx:mainline
     container_name: nginx
     restart: always
     networks:

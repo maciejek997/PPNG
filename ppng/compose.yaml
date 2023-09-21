@@ -12,7 +12,7 @@ volumes:
 
 services:
   gitea:
-    image: docker.io/gitea:latest
+    image: docker.io/gitea/gitea:latest
     container_name: gitea
     environment:
       - USER=git
